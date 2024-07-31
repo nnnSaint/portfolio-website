@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary: #fff;
+  --secondary: blueviolet;
+}
+body {
+}
+body,
+html {
+  background-color: black;
+}
+
+nav {
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  background-color: black;
+  padding: 10px 20px;
+}
+nav h1 {
+  width: 100%;
+  color: white;
+}
+.nav-bar {
+  /** This is for the tabulation bar **/
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5em;
+  width: 100%;
+
+  gap: 2em;
+}
+.nav-bar li {
+  list-style: none;
+}
+.nav-bar li a {
+  color: white;
+  text-decoration: none;
+}
+
+.flex-ctn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.flex-ctn .name,
+p {
+  color: var(--secondary);
+}
+.img-ctn img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.img-ctn {
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+.ctn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  gap: 1em;
+  width: auto;
+}
+.ctn a {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: blueviolet;
+  text-decoration: none;
+  color: var(--primary);
+}
+.ctn-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 4%;
+  height: auto;
+  margin: auto;
+}
+.ctn-details {
+  width: 500px;
+  overflow: hidden;
+  border-radius: 100px;
+  height: 450px;
+}
+.responsive-nav {
+  display: none;
+}
+.responsive-close {
+  display: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 1024px) {
+  .nav-bar.active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 200px;
+    max-height: 100%;
+    border-radius: 5px;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.8);
+    transform: translate(0px, 0px);
+    transition: all 2s ease;
+  }
+  .nav-bar {
+    transform: translate(250px, 0px);
+    transition: all 2s ease;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 200px;
+    max-height: 100%;
+    border-radius: 5px;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .responsive-close {
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: #fff;
+    font-size: 1em;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .responsive-nav {
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: #fff;
+    font-size: 1em;
+    display: flex;
+    cursor: pointer;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 360px) {
+  .ctn-all {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .ctn-details {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 100px;
+    height: 100%;
+  }
+  .flex-ctn p {
+    text-align: center;
+  }
+  .flex-ctn {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+  }
+  .nav-bar {
+    display: none;
+  }
+
+  .ctn-details {
+    display: flex;
+  }
+}
